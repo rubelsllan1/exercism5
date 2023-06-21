@@ -1,0 +1,32 @@
+fun main() {
+    testCalculateIMC()
+}
+
+fun calculateIMC(weight: Double, height: Double): Double {
+    val heightInMeters = height / 100
+    return weight / (heightInMeters * heightInMeters)
+}
+
+fun getWeightCategory(imc: Double): String {
+    return when {
+        imc < 18.5 -> "Peso bajo"
+        imc < 25.0 -> "Peso normal"
+        else -> "Sobrepeso"
+    }
+}
+
+fun testCalculateIMC() {
+    val weight = 65.0
+    val height = 163.0
+    val response = calculateIMC(weight, height)
+    val expected = 24.52
+
+    if (response == expected) {
+        println("Test Passed")
+    } else {
+        println("Test Failed")
+    }
+
+    val weightCategory = getWeightCategory(response)
+    println("Weight Category: $weightCategory")
+}

@@ -1,0 +1,24 @@
+fun main() {
+    testFindMax()
+}
+
+fun findMax(a: Int, b: Int): Int {
+    return if (a > b) {
+        a
+    } else {
+        b
+    }
+}
+
+fun testFindMax() {
+    val num1 = 10
+    val num2 = 20
+    val response = findMax(num1, num2)
+    val expected = 20
+
+    if (response == expected) {
+        println("Test Passed")
+    } else {
+        println("Test Failed")
+    }
+}

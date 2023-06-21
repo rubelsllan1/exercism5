@@ -1,0 +1,18 @@
+fun main() {
+
+    testAge()
+}
+
+fun isAdult(age: Int): Boolean {
+    return age >= 18
+}
+
+fun testAge() {
+    val response = isAdult(20)
+    val expected = true
+    if (response == expected) {
+        println("Test Passed")
+    } else {
+        println("Test Failed")
+    }
+};

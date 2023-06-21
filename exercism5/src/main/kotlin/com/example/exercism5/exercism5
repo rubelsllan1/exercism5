@@ -1,0 +1,20 @@
+fun main() {
+    testCalculateRectangleArea()
+}
+
+fun calculateRectangleArea(width: Double, height: Double): Double {
+    return width * height
+}
+
+fun testCalculateRectangleArea() {
+    val width = 5.0
+    val height = 10.0
+    val response = calculateRectangleArea(width, height)
+    val expected = 50.0
+
+    if (response == expected) {
+        println("Test Passed")
+    } else {
+        println("Test Failed")
+    }
+}
